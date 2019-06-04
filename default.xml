@@ -15,7 +15,7 @@
 
     <!-- op-tee projects -->
     <project path="optee_os" name="optee_os"/>
-    <project path="optee_client" name="optee_client">
+    <project path="optee_client" name="optee_client"/>
     <project path="optee_test" name="optee_test"/>
 
     <!-- toolchains projects -->
