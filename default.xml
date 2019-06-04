@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+    <remote name="intel" fetch="https://github.com/intel" />
+    <remote name="op-tee-ia" fetch="https://github.com/op-tee-ia" />
+    <remote name="aosp" fetch="https://android.googlesource.com" />
+
+    <default revision="master"
+             remote="op-tee-ia"
+             sync-c="true"
+             sync-j="5" />
+
+    <!-- ikgt projects -->
+    <project path="ikgt" name="ikgt-core" remote="intel" revision="trusty"/>
+
+    <!-- op-tee projects -->
+    <project path="optee_os" name="optee_os"/>
+    <project path="optee_client" name="optee_client">
+    <project path="optee_test" name="optee_test"/>
+
+    <!-- toolchains projects -->
+    <project path="toolchain/gcc/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9/" remote="aosp"/>
+
+    <!-- build projects -->
+    <project path="build" name="build">
+        <copyfile dest="Makefile" src="bxt-p.mk"/>
+    </project>
+
+</manifest>
