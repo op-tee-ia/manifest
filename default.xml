@@ -3,7 +3,7 @@
 <manifest>
     <remote name="intel" fetch="https://github.com/intel" />
     <remote name="op-tee-ia" fetch="https://github.com/op-tee-ia" />
-    <remote name="aosp" fetch="https://android.googlesource.com" />
+    <remote name="op-tee-linaro" fetch="https://github.com/OP-TEE" />
 
     <default revision="master"
              remote="op-tee-ia"
@@ -14,16 +14,13 @@
     <project path="ikgt" name="ikgt-core" remote="intel" revision="trusty"/>
 
     <!-- op-tee projects -->
-    <project path="optee_os" name="optee_os"/>
-    <project path="optee_client" name="optee_client"/>
-    <project path="optee_test" name="optee_test"/>
-
-    <!-- toolchains projects -->
-    <project path="toolchain/gcc/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9/" remote="aosp"/>
+    <project path="optee_os" name="optee_os" revision="3.13"/>
+    <project path="optee_client" remote="op-tee-linaro" name="optee_client"/>
+    <project path="optee_test" name="optee_test" revision="3.13"/>
 
     <!-- build projects -->
     <project path="build" name="build">
-        <copyfile dest="Makefile" src="bxt-p.mk"/>
+        <copyfile dest="Makefile" src="kbl-nuc.mk"/>
     </project>
 
 </manifest>
