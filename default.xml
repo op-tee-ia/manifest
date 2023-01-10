@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <manifest>
     <remote name="intel" fetch="https://github.com/intel" />
     <remote name="op-tee-ia" fetch="https://github.com/op-tee-ia" />
