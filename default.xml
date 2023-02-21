@@ -16,7 +16,7 @@
 
     <!-- op-tee projects -->
     <project path="optee_os" name="optee_os" revision="3.13"/>
-    <project path="optee_client" remote="op-tee-linaro" name="optee_client"/>
+    <project path="optee_client" remote="op-tee-linaro" name="optee_client" revision="refs/tags/3.13.0"/>
     <project path="optee_test" name="optee_test" revision="3.13"/>
 
     <!-- build projects -->
